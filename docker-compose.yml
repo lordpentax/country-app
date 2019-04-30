@@ -1,0 +1,18 @@
+version: '3.2'
+
+services:
+    mysql-docker-container:
+      image: mysql:latest
+      restart: always
+      environment:
+      - MYSQL_ROOT_PASSWORD=root123
+      - MYSQL_DATABASE=countrydb
+      - MYSQL_USER=pim_user
+      - MYSQL_PASSWORD=pim123
+      volumes:
+      - /Users/cfernandez/dockerVolumes/mysqlcontainer
+      command: 
+      - --max_connections=1024
+      - --default-authentication-plugin=mysql_native_password
+      ports:
+        - 32062:3306

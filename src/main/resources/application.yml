@@ -1,0 +1,17 @@
+##Application Name
+spring:
+    application:
+        name: country-app
+    ##DB - Connection
+    datasource:
+        url: jdbc:mysql://localhost:32062/countrydb?allowPublicKeyRetrieval=true&useSSL=false
+        username: root
+        password: root123
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    ##Hibernate
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5Dialect
+        hibernate:
+            ddl-auto: create
